@@ -283,73 +283,7 @@ $config_directories = array();
 /**
  * Salt for one-time login links, cancel links, form tokens, etc.
  *
- * This variable will be set to a random value by the installer. All one-time
- * login links will be invalidated if the value is changed. Note that if your
- * site is deployed on a cluster of web servers, you must ensure that this
- * variable has the same value on each server.
- *
- * For enhanced security, you may set this variable to the contents of a file
- * outside your document root; you should also ensure that this file is not
- * stored with backups of your database.
- *
- * Example:
- * @code
- *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
- * @endcode
- */
-$settings['hash_salt'] = 'pqffw5IyM39qLmqmmTeUwpeqkRvNayOfQOdv_f1taNiRkfv8ScblLzAT_jiqRcdKwtATEqDDmg';
 
-/**
- * Deployment identifier.
- *
- * Drupal's dependency injection container will be automatically invalidated and
- * rebuilt when the Drupal core version changes. When updating contributed or
- * custom code that changes the container, changing this identifier will also
- * allow the container to be invalidated as soon as code is deployed.
- */
-# $settings['deployment_identifier'] = \Drupal::VERSION;
-
-/**
- * Access control for update.php script.
- *
- * If you are updating your Drupal installation using the update.php script but
- * are not logged in using either an account with the "Administer software
- * updates" permission or the site maintenance account (the account that was
- * created during installation), you will need to modify the access check
- * statement below. Change the FALSE to a TRUE to disable the access check.
- * After finishing the upgrade, be sure to open this file again and change the
- * TRUE back to a FALSE!
- */
-$settings['update_free_access'] = FALSE;
-
-/**
- * External access proxy settings:
- *
- * If your site must access the Internet via a web proxy then you can enter the
- * proxy settings here. Set the full URL of the proxy, including the port, in
- * variables:
- * - $settings['http_client_config']['proxy']['http']: The proxy URL for HTTP
- *   requests.
- * - $settings['http_client_config']['proxy']['https']: The proxy URL for HTTPS
- *   requests.
- * You can pass in the user name and password for basic authentication in the
- * URLs in these settings.
- *
- * You can also define an array of host names that can be accessed directly,
- * bypassing the proxy, in $settings['http_client_config']['proxy']['no'].
- */
-# $settings['http_client_config']['proxy']['http'] = 'http://proxy_user:proxy_pass@example.com:8080';
-# $settings['http_client_config']['proxy']['https'] = 'http://proxy_user:proxy_pass@example.com:8080';
-# $settings['http_client_config']['proxy']['no'] = ['127.0.0.1', 'localhost'];
-
-/**
- * Reverse Proxy Configuration:
- *
- * Reverse proxy servers are often used to enhance the performance
- * of heavily visited sites and may also provide other site caching,
- * security, or encryption benefits. In an environment where Drupal
- * is behind a reverse proxy, the real IP address of the client should
- * be determined such that the correct client IP address is available
  * to Drupal's logging, statistics, and access management systems. In
  * the most simple scenario, the proxy server will add an
  * X-Forwarded-For header to the request that contains the client IP
