@@ -1,0 +1,15 @@
+fillpdf.settings:
+  type: config_object
+  mapping:
+    backend:
+      type: string
+      label: 'PDF processing method'
+    remote_protocol:
+      type: string
+      label: 'FillPDF Service endpoint protocol'
+    remote_endpoint:
+      type: string
+      label: 'FillPDF Service endpoint URL without protocol'
+    scheme:
+      type: string
+      label: 'Filesystem scheme for uploads'

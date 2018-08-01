@@ -1,0 +1,6 @@
+remote_protocol: https
+
+# Should not contain a protocol. That's what the above is for.
+remote_endpoint: fillpdf.io/xmlrpc.php
+
+scheme: public

@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Contains fillpdf_test.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function fillpdf_test_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the fillpdf_test module.
+    case 'help.page.fillpdf_test':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Fixtures/support for FillPDF tests.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function fillpdf_test_theme() {
+  $theme = [];
+
+  return $theme;
+}
